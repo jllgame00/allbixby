@@ -1,0 +1,9 @@
+endpoints {
+  action-endpoints {
+
+    action-endpoint (History){
+      accepted-inputs ()
+      local-endpoint (History.js)
+    }
+  }
+}

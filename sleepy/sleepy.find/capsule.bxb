@@ -1,0 +1,33 @@
+capsule {
+  id (jwbtest.sleepness_rest_area)
+  version (1.1.13)
+  format (3)
+  targets {
+    target (bixby-mobile-ko-KR)// Korean(South Korea)
+    target (bixby-mobile-en-US)
+    {enabled (false)}
+  }
+  store-sections{
+    section (TravelAndTransportation)
+    section (Local)
+  }
+  
+  runtime-flags{
+    concepts-inherit-super-type-features
+    modern-prompt-rejection
+    support-halt-effect-in-computed-inputs
+    no-filtering-with-validation
+  }
+  
+  permissions{
+    user-profile-access
+  }
+  
+  capsule-imports {
+    import (viv.entity) { version(3.19.8) as (entity) }
+    import (viv.core){ as (core) version-from (entity)}
+    import (viv.common) { as (common) version-from (entity) }
+    import (viv.geo) { version (9.18.15) as (geo) }
+    import (viv.self) { version(3.5.122) as (self) }
+  }
+}

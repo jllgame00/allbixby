@@ -1,0 +1,8 @@
+capsule-info {
+  display-name (영어 문법이 쓰인 문장)
+  developer-name (정우빈)
+  description ("영어 문법이 쓰인 문장")
+  dispatch-name (영어 문법이 쓰인 문장)
+  // Set your own image for your capsule's icon
+  icon-asset (images/icons/history.png)
+}

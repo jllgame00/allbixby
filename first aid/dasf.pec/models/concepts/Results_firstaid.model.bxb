@@ -1,0 +1,13 @@
+structure (Results_firstaid){
+  property (aid){
+   type (aid)
+   min (Optional) max (Many)
+ }
+   property (injuryname){
+   type (injuryname)
+   min (Optional) max (Many)
+   }
+   features{
+    transient
+  }
+}

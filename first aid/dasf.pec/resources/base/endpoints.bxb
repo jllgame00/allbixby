@@ -1,0 +1,9 @@
+endpoints {
+  action-endpoints {
+
+    action-endpoint (Firstaid){
+      accepted-inputs ()
+      local-endpoint (Firstaid.js)
+    }
+  }
+}

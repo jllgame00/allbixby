@@ -1,0 +1,9 @@
+endpoints {
+  action-endpoints {
+
+    action-endpoint (English){
+      accepted-inputs ()
+      local-endpoint (English.js)
+    }
+  }
+}

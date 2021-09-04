@@ -1,0 +1,13 @@
+structure (Result_English){
+  property (fact){
+   type (fact)
+   min (Optional) max (Many)
+ }
+   property (englishname){
+   type (englishname)
+   min (Optional) max (Many)
+   }
+   features{
+    transient
+  }
+}

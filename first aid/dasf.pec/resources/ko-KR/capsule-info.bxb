@@ -1,0 +1,8 @@
+capsule-info {
+  display-name (간단한 응급처치)
+  developer-name (정우빈)
+  description ("이 캡슐을 통해 응급처치 하는 방법을 알아볼 수 있습니다.")
+  dispatch-name (응급처치 방법)
+  // Set your own image for your capsule's icon
+  icon-asset (images/icons/hospital.png)
+}

@@ -1,0 +1,21 @@
+capsule-info {
+  display-name (전국 졸음쉼터 알림이)
+  developer-name  (CAU_SOFT)
+  icon-asset (/img/sleep.png)
+  description ("이 캡슐을 통해 졸음쉼터 위치와 다양한 정보를 받아보실 수 있습니다.")
+  privacy-policy-url(https://docs.google.com/document/d/1UF2fmblsT-ZqfKu5DvayUHQvVQb3sM02Tx3bFJn5Sao/edit?usp=sharing)
+  search-keywords{
+    keyword(졸음쉼터 정보)
+    keyword(졸음쉼터)
+    keyword(졸음쉼터 위치)
+  }
+
+  dispatch-name (졸음쉼터)//이름이 너무 길다는 의견이 있어서 수정
+  dispatch-aliases {
+    alias (전국 졸음쉼터 알림이)
+    alias (졸음쉼터 알림)
+    alias (졸음쉼터 알림이)
+    alias (졸음쉼터알림이)
+    alias (전국 졸음쉼터)
+  }
+}

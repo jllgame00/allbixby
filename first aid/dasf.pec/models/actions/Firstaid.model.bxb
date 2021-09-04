@@ -1,0 +1,8 @@
+action(Firstaid) {
+  collect{
+    
+  }
+ description (__DESCRIPTION__)
+ type(Constructor)
+ output(Results_firstaid)
+}

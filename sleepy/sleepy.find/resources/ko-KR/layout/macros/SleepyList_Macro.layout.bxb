@@ -1,0 +1,20 @@
+layout-macro-def (SleepyList) {
+  params {
+    param (sleepy) {
+      type (Sleepy)
+      min (Required) max (Many)
+    }
+  }
+  content {
+    cell-card {
+      slot2 {
+          content {
+              order (PrimarySecondary)
+              primary ("#{value(sleepy.name)}")
+              secondary ("[#{value(sleepy.location)}]")
+            }
+        }
+       
+     }
+  }
+}

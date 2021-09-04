@@ -1,0 +1,57 @@
+
+result-view {
+
+  match: Sleepy(this)
+
+  message {
+    if(size(this) == 1){
+       if(this.flag){
+        template (" 3km이내의 졸음쉼터가 하나 있네요! 확인해보세요!")
+       }else{
+        template ("해당 졸음쉼터를 확인해보세요!")
+      }    
+      
+    }else{     
+       if(this.flag){
+         template ("3km이내의 졸음쉼터들을 가져와 보았어요!")
+      }else{
+        template ("졸음쉼터 정보를 가져와 보았어요!")
+      }    
+    }   
+  }
+
+  render {
+    if(size(this) == 1){
+      layout{
+        layout-macro (SleepyMap){
+          param(info){
+            expression (this)
+          }
+        }
+         layout-macro (SleepyCall){
+          param(info){
+            expression (this)
+          }
+        }
+        layout-macro (SleepyInfo){
+          param(info){
+            expression (this)
+          }
+        }
+        
+      }
+   
+    }else{
+      list-of (this){
+        where-each (item){
+          layout-macro (SleepyList){
+            param(sleepy){
+              expression (item)
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}

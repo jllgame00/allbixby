@@ -1,0 +1,13 @@
+structure (Result_History){
+  property (fact){
+   type (fact)
+   min (Optional) max (Many)
+ }
+   property (historyname){
+   type (historyname)
+   min (Optional) max (Many)
+   }
+   features{
+    transient
+  }
+}

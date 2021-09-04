@@ -1,0 +1,57 @@
+result-view {
+  match: Result_History (Result_History)
+  message {
+    if (size(Result_History) > 1) {
+      template ("어떤 역사 사실을 알고싶은가요?")
+    }
+    else {
+      template ("#{value(Result_History.historyname)}의 역사 정보입니다.")
+    }
+  }
+  render {
+    if (size(Result_History) > 1) { // Result가 1개 이상일 경우
+      list-of (Result_History) {
+        where-each (info) {
+          title-card {
+            title-area {
+              halign (Start)
+              slot1 {
+                text {
+                  style (Title_M)
+                  value ("#{value(info.historyname)}")
+                }
+              }
+            }
+            on-click {
+              view-for (info)
+            }
+          }
+        }
+      }
+    }
+    else { // Result가 1개 선택된 경우
+      layout {
+        section {
+          content {
+            partitioned {
+              content {
+                for-each (Result_History.fact) {
+                  as (fact) {
+                    if (exists(fact)) {
+                      single-line {
+                        text {
+                          value ("#{value(fact)}")
+                          style (Detail_L)
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

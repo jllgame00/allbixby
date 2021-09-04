@@ -1,0 +1,54 @@
+result-view {
+	match : Results_firstaid(Results_firstaid)
+	
+	message{
+		if (size(Results_firstaid) > 1){
+			template ("어떤 응급처치 방법을 알려드릴까요??")
+		}
+		else{
+			template("#{value(Results_firstaid.injuryname)}의 응급 처치 정보입니다.")
+		}
+	}
+	
+	render{
+		if (size(Results_firstaid) > 1){ // Result가 1개 이상일 경우
+			list-of (Results_firstaid){
+				where-each (info){
+						title-area{
+							halign (Start)
+							slot1{
+								text{
+									style(Title_M)
+									value("#{value(info.injuryname)}")
+								}
+							}
+						}
+			    }
+		    }
+      }
+		else{ // Result가 1개 선택된 경우
+			layout{
+				section{
+					content{
+						partitioned{
+							content{
+								for-each (Results_firstaid.aid){
+									as(sum){
+										if(exists(sum)){
+											single-line{
+												text{
+													value("#{value(sum)}")
+													style(Detail_L)
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+	  }
+	}
+}
